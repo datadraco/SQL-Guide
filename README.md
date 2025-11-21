@@ -1,4 +1,4 @@
-# SQL-Guide
+# SQL Glossary
 
 Building out a file of notes covering beginner to advanced SQL techniques for future reference in preparation for data engineering projects + positions
 
@@ -6,7 +6,7 @@ Building out a file of notes covering beginner to advanced SQL techniques for fu
 
 ## Query Clauses
 
-`SELECT`: Leading line in a SQL query that identifies the columns that will end up in the result. Additional formatting can be performed at this stage such as aliasing, arithmetic, or aggregation.
+`SELECT`: Leading line in a SQL query that identifies the columns that will end up in the result. Additional formatting can be performed at this stage such as aliasing, arithmetic, or aggregation. Unique results can be found through the use of DISTINCT.
 
 `FROM`: Component of a query that identifies the source table(s) of the query. This is the stage that joining can be performed if there are multiple source tables, and formatting can be performed to shorten the syntax for the table names.
 
@@ -20,7 +20,7 @@ Building out a file of notes covering beginner to advanced SQL techniques for fu
 
 ## Logical Operators
 
-`IS_NULL`: NULL values cannot be identified through arithmetic (i.e. == NULL) but rather this built in function to identify cells with this particular data type.
+`IS_NULL`: NULL values cannot be identified through arithmetic (i.e. == NULL) but rather this built in function to identify cells with this particular data type. This can vary depending on the format (i.e. mysql uses ISNULL() or "is null").
 
 `AND`: Require two logical operations to be true.
 
@@ -43,6 +43,12 @@ Building out a file of notes covering beginner to advanced SQL techniques for fu
 `MIN` / `MAX`: Returns the lowest / highest value within a given column.
 
 `AVG`: Calculates the average of the values within a given column.
+
+## Useful Functions
+
+`LENGTH(string)`: Finds the number of characters in a given string including spaces.
+
+`DATEDIFF(datepart, date1, date2)`: Performs date1 - date2 and gives the result in the form of the selected datepart (in mysql, there is no datepart argument and it calculates in days).
 
 ## Join Operations & Logic
 
